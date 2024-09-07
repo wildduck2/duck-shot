@@ -1,0 +1,12 @@
+[package]
+name = "duck-shot"
+version = "0.1.0"
+edition = "2021"
+
+[build-dependencies]
+pkg-config = "0.3"
+
+[dependencies]
+x11 = "2.16.0"  
+image = "0.24"
+dirs = "5.0.0"
