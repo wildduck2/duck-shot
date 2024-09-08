@@ -42,7 +42,7 @@ fn main() -> Result<()> {
 
     // Saving img.
     let home = home_dir().expect("failed to find home directory!!");
-    let screenshots_dir = home.join("Picures").join("ScreenShots");
+    let screenshots_dir = home.join("Pictures").join("Screenshots");
     if screenshots_dir.exists() {
         fs::create_dir_all(&screenshots_dir)?;
     }
@@ -79,7 +79,7 @@ fn extract_image_buffer(image: *mut XImage) -> ImageBuffer<Rgba<u8>, Vec<u8>> {
         .try_into()
         .expect("failed to convert bytes_per_pixel to usize!!");
     let mut img = ImageBuffer::<Rgba<u8>, Vec<u8>>::new(unsafe { (*image).width as u32 }, unsafe {
-        (*image).width as u32
+        (*image).height as u32
     });
 
     // Filling img buffer with img data.
