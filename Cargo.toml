@@ -7,6 +7,10 @@ edition = "2021"
 pkg-config = "0.3"
 
 [dependencies]
-x11 = "2.16.0"  
+x11 = "2.16.0"
 image = "0.24"
+winit = "0.28"
 dirs = "5.0.0"
+tokio = { version = "1", features = ["full"] }
+wgpu = "0.15"
+
